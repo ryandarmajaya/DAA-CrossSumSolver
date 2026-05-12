@@ -81,7 +81,7 @@ int main() {
 
                 Color bgColor = isActive ? cellActive : (isHovered ? cellBgHover : cellBgNormal);
                 DrawRectangleRounded(cellRec, 0.2f, 0, bgColor);
-                DrawRectangleRoundedLines(cellRec, 0.2f, 0, isActive ? ORANGE : textMuted);
+                DrawRectangleRoundedLines(cellRec, 0.2f, 0.0, 0.3 ,isActive ? ORANGE : textMuted);
 
                 int textW = MeasureText(state.grid[i][j].c_str(), 20);
 
