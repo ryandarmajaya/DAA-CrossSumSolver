@@ -8,7 +8,7 @@ int main() {
     const int screenWidth = 900;
     const int screenHeight = 800;
 
-    InitWindow(screenWidth, screenHeight, "Sumplete Solver");
+    InitWindow(screenWidth, screenHeight, "CrossSum Solver");
     SetTargetFPS(60);
 
     AppState app;
