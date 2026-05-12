@@ -5,11 +5,13 @@
 #include <stdexcept>
 #include "solver.h"
 
+using namespace std;
+
 enum SelectionType { NONE, GRID_CELL, ROW_TARGET, COL_TARGET };
 
-int safeStoi(const std::string& str) {
-    if (str.empty() || str == "-") throw std::invalid_argument("Empty or invalid number");
-    return std::stoi(str);
+int safeStoi(const string& str) {
+    if (str.empty() || str == "-") throw invalid_argument("Empty or invalid number");
+    return stoi(str);
 }
 
 int main() {
@@ -26,17 +28,17 @@ int main() {
     float cellGap = 6.0f; 
     float stepSize = cellSize + cellGap;
 
-    std::vector<std::vector<std::string>> grid(MAX_GRID, std::vector<std::string>(MAX_GRID, ""));
-    std::vector<std::string> rowTargets(MAX_GRID, "");
-    std::vector<std::string> colTargets(MAX_GRID, "");
+    vector<vector<string>> grid(MAX_GRID, vector<string>(MAX_GRID, ""));
+    vector<string> rowTargets(MAX_GRID, "");
+    vector<string> colTargets(MAX_GRID, "");
 
-    std::vector<std::vector<Cell>> solvedBoard(MAX_GRID, std::vector<Cell>(MAX_GRID));
+    vector<vector<Cell>> solvedBoard(MAX_GRID, vector<Cell>(MAX_GRID));
     bool isSolved = false; 
 
     SelectionType currentSelection = NONE;
     int selRow = -1;
     int selCol = -1;
-    std::string statusMessage = "Enter numbers and press Solve when ready.";
+    string statusMessage = "Enter numbers and press Solve when ready.";
 
     Color bgLight = { 248, 250, 252, 255 };
     Color cellBgNormal = WHITE;
@@ -65,7 +67,7 @@ int main() {
         float startX = (screenWidth - totalGridWidth) / 2.0f;
         float startY = (screenHeight - totalUIHeight) / 2.0f + 40.0f; 
 
-        std::string sizeText = "Grid: " + std::to_string(gridSize) + " x " + std::to_string(gridSize);
+        string sizeText = "Grid: " + to_string(gridSize) + " x " + to_string(gridSize);
         int sizeTextW = MeasureText(sizeText.c_str(), 20);
         float blockW = 30 + 15 + sizeTextW + 15 + 30;
         float blockStartX = (screenWidth - blockW) / 2.0f;
@@ -91,9 +93,9 @@ int main() {
             
             if (CheckCollisionPointRec(mousePoint, btnSolve)) {
                 currentSelection = NONE;
-                std::vector<std::vector<int>> intGrid(gridSize, std::vector<int>(gridSize, 0));
-                std::vector<int> intRowTargets(gridSize, 0);
-                std::vector<int> intColTargets(gridSize, 0);
+                vector<vector<int>> intGrid(gridSize, vector<int>(gridSize, 0));
+                vector<int> intRowTargets(gridSize, 0);
+                vector<int> intColTargets(gridSize, 0);
 
                 try {
                     for(int i = 0; i < gridSize; i++) {
@@ -145,7 +147,7 @@ int main() {
         }
 
         if (currentSelection != NONE) {
-            std::string* activeStr = nullptr;
+            string* activeStr = nullptr;
             if (currentSelection == GRID_CELL) activeStr = &grid[selRow][selCol];
             else if (currentSelection == ROW_TARGET) activeStr = &rowTargets[selRow];
             else if (currentSelection == COL_TARGET) activeStr = &colTargets[selCol];
@@ -165,7 +167,7 @@ int main() {
                     } 
                     else if (isNumber) {
                         if (*activeStr == "0") {
-                            if (key != '0') *activeStr = std::string(1, (char)key);
+                            if (key != '0') *activeStr = string(1, (char)key);
                         } 
                         else if (*activeStr == "-" && key == '0') {
                         } 
