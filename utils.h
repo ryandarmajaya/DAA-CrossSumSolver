@@ -9,7 +9,7 @@ enum SelectionType { NONE, GRID_CELL, ROW_TARGET, COL_TARGET };
 
 struct AppState {
     static constexpr int MIN_GRID = 3;
-    static constexpr int MAX_GRID = 8;
+    static constexpr int MAX_GRID = 9;
 
     int gridSize = 3;
     std::vector<std::vector<std::string>> grid;
