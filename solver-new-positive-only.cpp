@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include "solver.h"
 
 using namespace std;
 
