@@ -7,7 +7,7 @@ using namespace std;
 int main() {
     const int screenWidth = 950;
     const int screenHeight = 900;
-    InitWindow(screenWidth, screenHeight, "CrossSum Solver");
+    InitWindow(screenWidth, screenHeight, "Cross Sum Solver");
     SetTargetFPS(60);
 
     AppState state;
@@ -59,8 +59,8 @@ int main() {
         BeginDrawing();
         ClearBackground(bgLight);
 
-        DrawText("SUMPLETE SOLVER", 30, 30, 28, textNormal);
-        DrawText("Dynamic Matric Solver", 30, 65, 16, textMuted);
+        DrawText("CROSS SUM SOLVER", 30, 30, 28, textNormal);
+        // DrawText("Dynamic Matric Solver", 30, 65, 16, textMuted);
 
         bool hoverMinus = CheckCollisionPointRec(mousePoint, btnMinus);
         bool hoverPlus = CheckCollisionPointRec(mousePoint, btnPlus);
@@ -81,7 +81,7 @@ int main() {
 
                 Color bgColor = isActive ? cellActive : (isHovered ? cellBgHover : cellBgNormal);
                 DrawRectangleRounded(cellRec, 0.2f, 0, bgColor);
-                DrawRectangleRoundedLines(cellRec, 0.2f, 0.0, isActive ? ORANGE : textMuted);
+                DrawRectangleRoundedLines(cellRec, 0.2f, 0.0, 0.3, isActive ? ORANGE : textMuted);
 
                 int textW = MeasureText(state.grid[i][j].c_str(), 20);
 

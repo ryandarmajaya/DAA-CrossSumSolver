@@ -1,41 +1,59 @@
-Requirement :
+# Cross Sum Solver 
 
-- Raylib (to compile library)
+---
+
+# Requirement
+
+- Raylib (to compile the library)
+
+## Install
+
+Download Raylib releases here:  
+https://github.com/raysan5/raylib/releases
+
+Pilih release yang sesuai dengan OS kamu (Windows/Linux).
 
 
-Install [here](https://github.com/raysan5/raylib/releases)
+## Linux
 
+### MingGW
 
-- Find suitable releases based on your OS (Windows/Linux)
-
-
-Linux :
-
-- MingGW
-
-```
+```bash
 sudo apt update
 sudo apt install g++-mingw-w64-x86-64
 ```
 
-Windows :
+## Compile
 
-- MingGW
+```
+x86_64-w64-mingw32-g++ main.cpp solver.cpp utils.cpp -o game.exe -I./include -L./lib -lraylib -lopengl32 -lgdi32 -lwinmm -static -static-libgcc -static-libstdc++
+```
 
+
+
+
+
+
+## Windows
+
+### MingGW
+```
 https://sourceforge.net/projects/mingw-w64/
-
-```
 ```
 
+### Compile
 ```
-g++ ../main.cpp ../solver.cpp ../utils.cpp -o testing.exe -I include -L lib -lraylib -lopengl32 -lgdi32 -lwinmm -static -static-libgcc -static-libstdc++
+g++ main.cpp solver.cpp utils.cpp -o game.exe -I include -L lib -lraylib -lopengl32 -lgdi32 -lwinmm -static -static-libgcc -static-libstdc++
 ```
 
-How to run :
-
-- go to game.exe
-- run with :
-
+### How to run
+- Buka folder tempat game.exe
+- Jalankan dengan command ini, di linux:
+```
 wine game.exe
-.\game.exe
+```
 
+- di Windows:
+```
+.\game.exe
+```
