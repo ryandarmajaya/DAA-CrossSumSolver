@@ -57,15 +57,16 @@ Follow these steps if you want to recompile the game yourself.
 
 **Prerequisites:** `MinGW-w64` installed and added to your system `PATH`. Check [mingw-w64.org](https://www.mingw-w64.org/) for installation
 
+> go to build directory
 
 **Windows:**
 
 ```bat
-g++ main.cpp solver.cpp utils.cpp -o game.exe -I include -L lib -lraylib -lopengl32 -lgdi32 -lwinmm -static -static-libgcc -static-libstdc++
+g++ main.cpp solver.cpp utils.cpp -o ../game.exe -I include -L lib -lraylib -lopengl32 -lgdi32 -lwinmm -static -static-libgcc -static-libstdc++
 ```
 
 **Linux (Debian/Ubuntu based):**
 
 ```bash
-x86_64-w64-mingw32-g++ main.cpp solver.cpp utils.cpp -o game.exe -I./compiler/include -L./compiler/lib -lraylib -lopengl32 -lgdi32 -lwinmm -static -static-libgcc -static-libstdc++
+x86_64-w64-mingw32-g++ main.cpp solver.cpp utils.cpp -o ../game.exe -I./include -L./lib -lraylib -lopengl32 -lgdi32 -lwinmm -static -static-libgcc -static-libstdc++
 ```
