@@ -33,7 +33,7 @@ wine game.exe
 
 Follow these steps if you want to recompile the game yourself.
 
-> **Note:** The required Raylib headers and libraries are already bundled under `compiler/include/` and `compiler/lib/`. You do not need to download Raylib separately unless you want a different version.
+> **Note:** The required Raylib headers and libraries are already bundled under `build/include/` and `build/lib/`. You do not need to download Raylib separately unless you want a different version.
 >
 > If you do need a different Raylib release, download it from:  
 > https://github.com/raysan5/raylib/releases
