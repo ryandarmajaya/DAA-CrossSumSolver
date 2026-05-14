@@ -1,8 +1,5 @@
 # Cross Sum Solver
 
-<img width="455" height="531" alt="image" src="https://github.com/user-attachments/assets/63a64ad3-8c70-4f71-a115-8863cd8e36ee" />
-<img width="951" height="935" alt="image" src="https://github.com/user-attachments/assets/07ed05a8-2af6-4948-9b6c-ed05eaea11b5" />
-
 ---
 
 ## Table of Contents
@@ -73,3 +70,10 @@ g++ main.cpp solver.cpp utils.cpp -o ../game.exe -I include -L lib -lraylib -lop
 ```bash
 x86_64-w64-mingw32-g++ main.cpp solver.cpp utils.cpp -o ../game.exe -I./include -L./lib -lraylib -lopengl32 -lgdi32 -lwinmm -static -static-libgcc -static-libstdc++
 ```
+
+---
+
+## Documentation
+
+<img width="100%" alt="image" src="https://github.com/user-attachments/assets/970d8195-1a12-4c16-9ed8-ec11d2c2f9c3" />
+<img width="100%" alt="image" src="https://github.com/user-attachments/assets/07ed05a8-2af6-4948-9b6c-ed05eaea11b5" />
