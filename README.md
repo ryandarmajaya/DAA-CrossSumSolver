@@ -1,8 +1,7 @@
 # Cross Sum Solver
 
-<img align="left" height=500 alt="image" src="https://github.com/user-attachments/assets/9f66d688-a389-4405-ad76-2459bcf054c2" />
-<img align="right" height=500 alt="image" src="https://github.com/user-attachments/assets/c716aa5a-2d7e-4dde-ab18-8d671c4ab482" />
-<br clear="all">
+<img width="455" height="531" alt="image" src="https://github.com/user-attachments/assets/63a64ad3-8c70-4f71-a115-8863cd8e36ee" />
+<img width="951" height="935" alt="image" src="https://github.com/user-attachments/assets/07ed05a8-2af6-4948-9b6c-ed05eaea11b5" />
 
 ---
 
