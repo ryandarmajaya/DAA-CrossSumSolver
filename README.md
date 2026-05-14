@@ -9,25 +9,6 @@
 
 ---
 
-## Requirements
-
-### Windows
-- [MinGW-w64](https://sourceforge.net/projects/mingw-w64/) — C++ compiler for Windows
-- Raylib (included in `compiler/lib/` and `compiler/include/`)
-
-### Linux
-- **Wine** — to run the pre-compiled `.exe` file
-  ```bash
-  sudo apt install wine
-  ```
-- **MinGW-w64 cross-compiler** — only needed if you want to build from source
-  ```bash
-  sudo apt update
-  sudo apt install g++-mingw-w64-x86-64
-  ```
-
----
-
 ## Running the Game
 
 A pre-compiled `game.exe` is already included in the project root. No build step is required to run it.
@@ -63,26 +44,27 @@ Follow these steps if you want to recompile the game yourself.
 .
 ├── build/
 │   ├── include/        # Raylib headers
-│   └── lib/            # Raylib static/dynamic libraries
-│   └── main.cpp
-│   └── solver.cpp
-│   └── solver.h
-│   └── utils.cpp
+│   ├── lib/            # Raylib libraries
+│   ├── main.cpp
+│   ├── solver.cpp
+│   ├── solver.h
+│   ├── utils.cpp
 │   └── utils.h
 └── game.exe
 ```
 
-### Windows
+### Build
 
-**Prerequisites:** MinGW-w64 installed and added to your system `PATH`. Check 
+**Prerequisites:** `MinGW-w64` installed and added to your system `PATH`. Check [mingw-w64.org](https://www.mingw-w64.org/) for installation
+
+
+**Windows:**
 
 ```bat
 g++ main.cpp solver.cpp utils.cpp -o game.exe -I include -L lib -lraylib -lopengl32 -lgdi32 -lwinmm -static -static-libgcc -static-libstdc++
 ```
 
-### Linux (Cross-compile for Windows)
-
-**Prerequisites:** `g++-mingw-w64-x86-64` installed (see [Requirements](#requirements)).
+**Linux (Debian/Ubuntu based):**
 
 ```bash
 x86_64-w64-mingw32-g++ main.cpp solver.cpp utils.cpp -o game.exe -I./compiler/include -L./compiler/lib -lraylib -lopengl32 -lgdi32 -lwinmm -static -static-libgcc -static-libstdc++
