@@ -1,5 +1,9 @@
 # Cross Sum Solver
 
+<img align="left" height=500 alt="image" src="https://github.com/user-attachments/assets/9f66d688-a389-4405-ad76-2459bcf054c2" />
+<img align="right" height=500 alt="image" src="https://github.com/user-attachments/assets/c716aa5a-2d7e-4dde-ab18-8d671c4ab482" />
+<br clear="all">
+
 ---
 
 ## Table of Contents
