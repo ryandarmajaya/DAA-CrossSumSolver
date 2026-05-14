@@ -55,9 +55,9 @@ Follow these steps if you want to recompile the game yourself.
 
 ### Build
 
-**Prerequisites:** `MinGW-w64` installed and added to your system `PATH`. Check [mingw-w64.org](https://www.mingw-w64.org/) for installation
+**Prerequisites:** `MinGW-w64` installed and added to your system `PATH`. Check [mingw-w64.org](https://www.mingw-w64.org/) for installation.
 
-> go to build directory
+> Go to build directory
 
 **Windows:**
 
